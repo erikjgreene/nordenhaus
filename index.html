@@ -36,9 +36,10 @@
   <!-- Top Announcement Bar -->
   <aside class="announcement-bar" id="announcement-bar">
     <div class="announcement-content">
-      <span class="badge-pulse"><span class="pulse-dot"></span> 4-Season Chalet</span>
-      <span>Now booking Fall Colors & Winter Ski Season at Schuss Mountain • Includes Resort Pool Pass</span>
-      <a href="#booking-section" class="announcement-link">Check Availability &rarr;</a>
+      <span class="badge-pulse"><span class="pulse-dot"></span> 4-Season</span>
+      <span class="announcement-text-desktop">Now booking Fall Colors & Winter Ski Season at Schuss Mountain • Includes Resort Pool Pass</span>
+      <span class="announcement-text-mobile">Booking Fall & Winter Ski • Pool Pass Included</span>
+      <a href="#booking-section" class="announcement-link">Book &rarr;</a>
     </div>
   </aside>
 
@@ -54,7 +55,8 @@
         </span>
         <div class="brand-text">
           <span class="brand-name">NORDEN HAUS</span>
-          <span class="brand-tag">Schuss Mountain • Shanty Creek</span>
+          <span class="brand-tag brand-tag-desktop">Schuss Mountain • Shanty Creek</span>
+          <span class="brand-tag brand-tag-mobile">Schuss Mountain Chalet</span>
         </div>
       </a>
 
@@ -69,11 +71,12 @@
       </nav>
 
       <div class="header-actions">
-        <a href="#booking-section" class="btn btn-primary btn-sm">
-          <span>Book Your Stay</span>
+        <a href="#booking-section" class="btn btn-primary btn-sm btn-header-book" id="header-book-btn">
+          <span class="btn-text-desktop">Book Your Stay</span>
+          <span class="btn-text-mobile">Book</span>
           <i data-lucide="calendar"></i>
         </a>
-        <button class="mobile-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+        <button class="mobile-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
           <i data-lucide="menu"></i>
         </button>
       </div>

@@ -597,15 +597,39 @@ function setupMobileNav() {
   const drawer = document.getElementById('mobile-drawer');
 
   if (btn && drawer) {
-    btn.addEventListener('click', () => {
-      drawer.classList.toggle('open');
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = drawer.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      btn.innerHTML = isOpen
+        ? '<i data-lucide="x"></i>'
+        : '<i data-lucide="menu"></i>';
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
     });
 
     const links = drawer.querySelectorAll('.mobile-nav-link, .btn');
     links.forEach((l) => {
       l.addEventListener('click', () => {
         drawer.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.innerHTML = '<i data-lucide="menu"></i>';
+        if (window.lucide) {
+          window.lucide.createIcons();
+        }
       });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (drawer.classList.contains('open') && !drawer.contains(e.target) && !btn.contains(e.target)) {
+        drawer.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.innerHTML = '<i data-lucide="menu"></i>';
+        if (window.lucide) {
+          window.lucide.createIcons();
+        }
+      }
     });
   }
 }
