@@ -1,24 +1,23 @@
 {
-  "name": "nordenhaus-data-extractor",
+  "name": "nordenhaus",
   "version": "1.0.0",
-  "description": "Direct Airbnb listing and reviews scraper (no images, no Apify required) for Norden Haus website build",
+  "description": "Official responsive web experience for Norden Haus chalet at Schuss Mountain & Shanty Creek Resort",
   "type": "module",
-  "main": "scripts/scrape_airbnb_direct.js",
   "scripts": {
     "dev": "python3 -m http.server 3000",
     "serve": "python3 -m http.server 3000",
-    "scrape": "node scripts/scrape_airbnb_direct.js",
-    "scrape:py": "python3 scripts/scrape_airbnb_direct.py",
-    "scrape:apify": "node scripts/scrape_airbnb_data.js"
+    "start": "python3 -m http.server 3000"
   },
   "keywords": [
-    "airbnb",
-    "scraper",
-    "reviews",
     "nordenhaus",
+    "schuss-mountain",
+    "shanty-creek",
+    "bellaire",
     "vacation-rental",
-    "travel"
+    "chalet",
+    "torch-lake",
+    "github-pages"
   ],
-  "author": "",
-  "license": "ISC"
+  "author": "Erik Greene",
+  "license": "UNLICENSED"
 }
