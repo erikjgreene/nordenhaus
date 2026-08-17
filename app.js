@@ -320,6 +320,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 6. Setup Keyboard Shortcuts for Lightbox
   setupKeyboardNavigation();
+
+  // 7. Setup Touch Swipe Navigation for Mobile Lightbox
+  setupTouchNavigation();
 });
 
 // ------------------------------------------------------------------------------
@@ -472,25 +475,54 @@ function setupKeyboardNavigation() {
   });
 }
 
+function setupTouchNavigation() {
+  const modal = document.getElementById('lightbox-modal');
+  if (!modal) return;
+
+  let touchStartX = 0;
+  let touchStartY = 0;
+
+  modal.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+    touchStartY = e.changedTouches[0].screenY;
+  }, { passive: true });
+
+  modal.addEventListener('touchend', (e) => {
+    const touchEndX = e.changedTouches[0].screenX;
+    const touchEndY = e.changedTouches[0].screenY;
+    const diffX = touchEndX - touchStartX;
+    const diffY = touchEndY - touchStartY;
+
+    // Detect horizontal swipe if delta X is greater than delta Y and threshold met
+    if (Math.abs(diffX) > 40 && Math.abs(diffX) > Math.abs(diffY)) {
+      if (diffX < 0) {
+        nextLightboxImage(); // Swiped left -> next photo
+      } else {
+        prevLightboxImage(); // Swiped right -> prev photo
+      }
+    }
+  }, { passive: true });
+}
+
 // ------------------------------------------------------------------------------
 // Seasons Toggle
 // ------------------------------------------------------------------------------
 function setSeason(seasonName) {
-  const winterBtn = document.getElementById('season-tab-winter');
-  const summerBtn = document.getElementById('season-tab-summer');
+  const winterBtn = document.getElementById('season-winter-btn') || document.getElementById('season-tab-winter');
+  const summerBtn = document.getElementById('season-summer-btn') || document.getElementById('season-tab-summer');
   const winterPane = document.getElementById('season-winter');
   const summerPane = document.getElementById('season-summer');
 
-  if (!winterBtn || !summerBtn || !winterPane || !summerPane) return;
+  if (!winterPane || !summerPane) return;
 
   if (seasonName === 'winter') {
-    winterBtn.classList.add('active');
-    summerBtn.classList.remove('active');
+    if (winterBtn) winterBtn.classList.add('active');
+    if (summerBtn) summerBtn.classList.remove('active');
     winterPane.classList.add('active');
     summerPane.classList.remove('active');
   } else {
-    summerBtn.classList.add('active');
-    winterBtn.classList.remove('active');
+    if (summerBtn) summerBtn.classList.add('active');
+    if (winterBtn) winterBtn.classList.remove('active');
     summerPane.classList.add('active');
     winterPane.classList.remove('active');
   }
