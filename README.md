@@ -87,5 +87,5 @@ The scraper includes a recursive sanitization step that removes third-party revi
 4. **Amenities**: Categorized into *Living & Comfort*, *Kitchen & Dining*, *Outdoor & Recreation*, *Bed & Bath*, *Parking & Facilities*, and *Safety & Security*.
 5. **Location & Proximity**: Drive times to Schuss Mountain Slopes (4 mins), 5 Golf Courses (5 mins), Short's Brew Pub (8 mins), Torch Lake (15 mins), Grass River (12 mins), and Traverse City (50 mins).
 6. **House Rules**: Check-in (4 PM), Check-out (10 AM), quiet hours, and property guidelines.
-7. **Host Profile**: Rick (Superhost, 100% response rate, within an hour).
+7. **Host Profile**: Superhost (100% response rate, within an hour).
 8. **Guest Reviews & Ratings**: 10 reviews with star ratings, comments, host responses, and automated sentiment / topic classification.

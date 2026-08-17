@@ -79,7 +79,7 @@ function analyzeSentimentAndTopics(text) {
   // Topic tagging
   const topics = [];
   if (lower.includes('clean') || lower.includes('spotless') || lower.includes('tidy')) topics.push('cleanliness');
-  if (lower.includes('host') || lower.includes('rick') || lower.includes('communication') || lower.includes('helpful')) topics.push('host');
+  if (lower.includes('host') || lower.includes('communication') || lower.includes('helpful')) topics.push('host');
   if (lower.includes('location') || lower.includes('close') || lower.includes('shores') || lower.includes('woods')) topics.push('location');
   if (lower.includes('ski') || lower.includes('slopes') || lower.includes('schuss') || lower.includes('winter')) topics.push('skiing');
   if (lower.includes('golf') || lower.includes('courses')) topics.push('golf');
@@ -435,7 +435,7 @@ function getCompleteListingDataset() {
       ]
     },
     host: {
-      name: 'Rick',
+      name: 'Host',
       isSuperhost: true,
       responseRate: '100%',
       responseTime: 'within an hour',
@@ -490,7 +490,7 @@ function getCompleteListingDataset() {
           rating: 5.0,
           title: 'Great Stay',
           comment:
-            'Dealing with Rick was the best, he answered all questions plus more, confirmed boat launches near by, place was great, fun and awesome back in the woods. We all had a blast and would stay there again for sure!',
+            'Dealing with the host was the best, all questions were answered plus more, confirmed boat launches near by, place was great, fun and awesome back in the woods. We all had a blast and would stay there again for sure!',
           tripType: 'group',
           likedAspects: ['cleanliness', 'check-in', 'communication', 'location', 'listing accuracy'],
           sentiment: 'positive',
@@ -509,7 +509,7 @@ function getCompleteListingDataset() {
           tripType: 'family',
           likedAspects: ['cleanliness', 'check-in', 'communication', 'location', 'listing accuracy'],
           hostResponse: {
-            author: 'Rick (Owner)',
+            author: 'Host (Owner)',
             date: '2023-01-27',
             comment: 'Thank you Zachary! Great guest! Very good communication! Highly recommended.'
           },
@@ -529,7 +529,7 @@ function getCompleteListingDataset() {
           tripType: 'family',
           likedAspects: ['cleanliness', 'check-in', 'communication', 'location', 'listing accuracy'],
           hostResponse: {
-            author: 'Rick (Owner)',
+            author: 'Host (Owner)',
             date: '2023-01-23',
             comment: 'Great guest. Very responsive and left the home in great shape. Come back anytime, John!'
           },
@@ -548,7 +548,7 @@ function getCompleteListingDataset() {
           tripType: 'group',
           likedAspects: ['cleanliness', 'check-in', 'communication', 'location', 'listing accuracy'],
           hostResponse: {
-            author: 'Rick (Owner)',
+            author: 'Host (Owner)',
             date: '2023-02-08',
             comment: 'Thanks Jay! Glad you enjoyed your stay. See you next time!'
           },
@@ -578,7 +578,7 @@ function getCompleteListingDataset() {
           rating: 5.0,
           title: 'Perfect stay!',
           comment:
-            'This is a great property and I’ve stayed at several over the years. Rick really made everything go smoothly and gave us several recommendations in the area for things to do! Check in and out was super smooth with clear checklists. We had six kids with us and they fit perfectly and loved the bunk beds. The fire pit was great and everything in the house was brand new. We went to the water park and Torch Lake and they are both quick drives. The pool pass was a bonus and the kids loved the indoor and outdoor pools! Thank you for sharing your beautiful place with our family! We will stay here again for sure!!',
+            'This is a great property and I’ve stayed at several over the years. The host really made everything go smoothly and gave us several recommendations in the area for things to do! Check in and out was super smooth with clear checklists. We had six kids with us and they fit perfectly and loved the bunk beds. The fire pit was great and everything in the house was brand new. We went to the water park and Torch Lake and they are both quick drives. The pool pass was a bonus and the kids loved the indoor and outdoor pools! Thank you for sharing your beautiful place with our family! We will stay here again for sure!!',
           tripType: 'family',
           likedAspects: ['cleanliness', 'check-in', 'communication', 'location', 'listing accuracy'],
           sentiment: 'positive',

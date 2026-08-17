@@ -315,7 +315,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 4. Setup Mobile Navigation
   setupMobileNav();
 
-  // 5. Setup Default Dates in Inquiry Form
+  // 5. Setup Default Dates in Booking Form
   setupDefaultDates();
 
   // 6. Setup Keyboard Shortcuts for Lightbox
@@ -460,43 +460,54 @@ function updateLightboxContent() {
 function setupKeyboardNavigation() {
   document.addEventListener('keydown', (e) => {
     const modal = document.getElementById('lightbox-modal');
-    if (modal && modal.classList.contains('active')) {
-      if (e.key === 'Escape') closeLightbox();
-      if (e.key === 'ArrowRight') nextLightboxImage();
-      if (e.key === 'ArrowLeft') prevLightboxImage();
+    if (!modal || !modal.classList.contains('active')) return;
+
+    if (e.key === 'ArrowRight') {
+      nextLightboxImage();
+    } else if (e.key === 'ArrowLeft') {
+      prevLightboxImage();
+    } else if (e.key === 'Escape') {
+      closeLightbox();
     }
   });
 }
 
 // ------------------------------------------------------------------------------
-// Four Seasons Switcher
+// Seasons Toggle
 // ------------------------------------------------------------------------------
-function setSeason(season) {
-  const winterBtn = document.getElementById('season-winter-btn');
-  const summerBtn = document.getElementById('season-summer-btn');
+function setSeason(seasonName) {
+  const winterBtn = document.getElementById('season-tab-winter');
+  const summerBtn = document.getElementById('season-tab-summer');
   const winterPane = document.getElementById('season-winter');
   const summerPane = document.getElementById('season-summer');
 
-  if (season === 'winter') {
-    winterBtn?.classList.add('active');
-    summerBtn?.classList.remove('active');
-    winterPane?.classList.add('active');
-    summerPane?.classList.remove('active');
+  if (!winterBtn || !summerBtn || !winterPane || !summerPane) return;
+
+  if (seasonName === 'winter') {
+    winterBtn.classList.add('active');
+    summerBtn.classList.remove('active');
+    winterPane.classList.add('active');
+    summerPane.classList.remove('active');
   } else {
-    summerBtn?.classList.add('active');
-    winterBtn?.classList.remove('active');
-    summerPane?.classList.add('active');
-    winterPane?.classList.remove('active');
+    summerBtn.classList.add('active');
+    winterBtn.classList.remove('active');
+    summerPane.classList.add('active');
+    winterPane.classList.remove('active');
   }
 }
 
 // ------------------------------------------------------------------------------
-// Reviews Filter
+// Reviews Filtering
 // ------------------------------------------------------------------------------
 function filterReviews(tripType) {
-  const pills = document.querySelectorAll('.review-filter-pill');
-  pills.forEach((p) => p.classList.remove('active'));
-  event.target.classList.add('active');
+  const buttons = document.querySelectorAll('.review-filter-pill');
+  buttons.forEach((btn) => {
+    if (btn.getAttribute('onclick')?.includes(tripType)) {
+      btn.classList.add('active');
+    } else {
+      btn.classList.remove('active');
+    }
+  });
 
   const cards = document.querySelectorAll('.review-item-card');
   cards.forEach((card) => {
@@ -510,7 +521,7 @@ function filterReviews(tripType) {
 }
 
 // ------------------------------------------------------------------------------
-// Inquiry & Booking Handlers
+// Booking Handlers
 // ------------------------------------------------------------------------------
 function setupDefaultDates() {
   const checkinInput = document.getElementById('check-in-date');
@@ -525,54 +536,25 @@ function setupDefaultDates() {
 
   if (checkinInput) checkinInput.value = defaultIn.toISOString().split('T')[0];
   if (checkoutInput) checkoutInput.value = defaultOut.toISOString().split('T')[0];
-
-  const modalIn = document.getElementById('modal-checkin');
-  const modalOut = document.getElementById('modal-checkout');
-  if (modalIn) modalIn.value = defaultIn.toISOString().split('T')[0];
-  if (modalOut) modalOut.value = defaultOut.toISOString().split('T')[0];
 }
 
-function handleQuickInquiry(e) {
+function handleQuickBooking(e) {
   e.preventDefault();
-  const checkin = document.getElementById('check-in-date')?.value;
-  const checkout = document.getElementById('check-out-date')?.value;
+  const checkin = document.getElementById('check-in-date')?.value || '';
+  const checkout = document.getElementById('check-out-date')?.value || '';
+  const guests = document.getElementById('guest-count')?.value || '9';
 
-  openInquiryModal();
+  let airbnbUrl = 'https://www.airbnb.com/rooms/652864643401920477';
+  const params = [];
+  if (checkin) params.push(`check_in=${encodeURIComponent(checkin)}`);
+  if (checkout) params.push(`check_out=${encodeURIComponent(checkout)}`);
+  if (guests) params.push(`adults=${encodeURIComponent(guests)}`);
 
-  const modalIn = document.getElementById('modal-checkin');
-  const modalOut = document.getElementById('modal-checkout');
-  if (modalIn && checkin) modalIn.value = checkin;
-  if (modalOut && checkout) modalOut.value = checkout;
-}
-
-function openInquiryModal() {
-  const modal = document.getElementById('inquiry-modal');
-  if (modal) {
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
+  if (params.length > 0) {
+    airbnbUrl += `?${params.join('&')}`;
   }
-}
 
-function closeInquiryModal() {
-  const modal = document.getElementById('inquiry-modal');
-  if (modal) {
-    modal.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-}
-
-function submitDirectInquiry(e) {
-  e.preventDefault();
-  const name = document.getElementById('modal-name')?.value;
-  const email = document.getElementById('modal-email')?.value;
-  const checkin = document.getElementById('modal-checkin')?.value;
-  const checkout = document.getElementById('modal-checkout')?.value;
-
-  alert(
-    `Thank you, ${name}!\n\nYour inquiry for Norden Haus from ${checkin} to ${checkout} has been sent to Host Rick.\n\nYou will receive a response at ${email} shortly!`
-  );
-
-  closeInquiryModal();
+  window.open(airbnbUrl, '_blank', 'noopener,noreferrer');
 }
 
 // ------------------------------------------------------------------------------
@@ -622,7 +604,4 @@ window.nextLightboxImage = nextLightboxImage;
 window.prevLightboxImage = prevLightboxImage;
 window.setSeason = setSeason;
 window.filterReviews = filterReviews;
-window.openInquiryModal = openInquiryModal;
-window.closeInquiryModal = closeInquiryModal;
-window.handleQuickInquiry = handleQuickInquiry;
-window.submitDirectInquiry = submitDirectInquiry;
+window.handleQuickBooking = handleQuickBooking;

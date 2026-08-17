@@ -80,7 +80,7 @@ def analyze_sentiment_and_topics(text):
     topics = []
     if any(w in lower for w in ("clean", "spotless", "tidy")):
         topics.append("cleanliness")
-    if any(w in lower for w in ("host", "rick", "communication", "helpful")):
+    if any(w in lower for w in ("host", "communication", "helpful")):
         topics.append("host")
     if any(w in lower for w in ("location", "close", "woods")):
         topics.append("location")

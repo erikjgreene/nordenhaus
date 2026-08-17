@@ -698,7 +698,7 @@
             <div class="big-score">4.9</div>
             <div class="score-stars">★★★★★</div>
             <div class="score-sub">10 Verified Reviews • 100% Recommended</div>
-            <div class="superhost-badge-tag"><i data-lucide="award"></i> Superhost Rick</div>
+            <div class="superhost-badge-tag"><i data-lucide="award"></i> Superhost Status</div>
           </div>
 
           <div class="summary-meters-col">
@@ -757,7 +757,7 @@
             </div>
             <h4 class="rev-title">“Perfect stay! Kids loved the bunk beds and firepit.”</h4>
             <p class="rev-comment">
-              "This is a great property and I’ve stayed at several over the years. Rick really made everything go smoothly and gave us several recommendations in the area for things to do! Check in and out was super smooth with clear checklists. We had six kids with us and they fit perfectly and loved the bunk beds. The fire pit was great and everything in the house was brand new. We went to the water park and Torch Lake and they are both quick drives. The pool pass was a bonus and the kids loved the indoor and outdoor pools! Thank you for sharing your beautiful place with our family! We will stay here again for sure!!"
+              "This is a great property and I’ve stayed at several over the years. The host really made everything go smoothly and gave us several recommendations in the area for things to do! Check in and out was super smooth with clear checklists. We had six kids with us and they fit perfectly and loved the bunk beds. The fire pit was great and everything in the house was brand new. We went to the water park and Torch Lake and they are both quick drives. The pool pass was a bonus and the kids loved the indoor and outdoor pools! Thank you for sharing your beautiful place with our family! We will stay here again for sure!!"
             </p>
             <div class="rev-tags">
               <span class="tag-pill">Cleanliness</span>
@@ -796,9 +796,9 @@
               </div>
               <div class="rev-rating">★★★★★ <span>5.0</span></div>
             </div>
-            <h4 class="rev-title">“Dealing with Rick was the best.”</h4>
+            <h4 class="rev-title">“Host communication was the best.”</h4>
             <p class="rev-comment">
-              "Dealing with Rick was the best, he answered all questions plus more, confirmed boat launches near by, place was great, fun and awesome back in the woods. We all had a blast and would stay there again for sure!"
+              "Dealing with the host was the best, all questions were answered plus more, confirmed boat launches near by, place was great, fun and awesome back in the woods. We all had a blast and would stay there again for sure!"
             </p>
             <div class="rev-tags">
               <span class="tag-pill">Host Communication</span>
@@ -821,7 +821,7 @@
               "We absolutely loved our stay! No trouble getting to the location, everything was in order as advertised, and communication was above and beyond. Thank you for providing a fantastic home base for our trip!"
             </p>
             <div class="host-reply-bubble">
-              <div class="host-reply-head"><i data-lucide="message-square"></i> Response from Host Rick:</div>
+              <div class="host-reply-head"><i data-lucide="message-square"></i> Response from Host:</div>
               <p>"Thank you Zachary! Great guest! Very good communication! Highly recommended."</p>
             </div>
             <div class="rev-tags">
@@ -864,7 +864,7 @@
               "Owner of property responded quickly to emails, house was very clean and comfortable, we hope to stay again next winter!"
             </p>
             <div class="host-reply-bubble">
-              <div class="host-reply-head"><i data-lucide="message-square"></i> Response from Host Rick:</div>
+              <div class="host-reply-head"><i data-lucide="message-square"></i> Response from Host:</div>
               <p>"Great guest. Very responsive and left the home in great shape. Come back anytime, John!"</p>
             </div>
           </div>
@@ -883,7 +883,7 @@
               "We loved our time here. Very close to the ski hill and DT Bellaire. A+"
             </p>
             <div class="host-reply-bubble">
-              <div class="host-reply-head"><i data-lucide="message-square"></i> Response from Host Rick:</div>
+              <div class="host-reply-head"><i data-lucide="message-square"></i> Response from Host:</div>
               <p>"Thanks Jay! Glad you enjoyed your stay. See you next time!"</p>
             </div>
           </div>
@@ -952,7 +952,7 @@
             <span class="section-eyebrow text-light">Reserve Your Stay</span>
             <h2 class="booking-heading">Ready for your Northern Michigan getaway?</h2>
             <p class="booking-sub">
-              Book directly with Host Rick or reserve with instant confirmation through Airbnb or Vrbo.
+              Reserve your dates with instant confirmation through Airbnb.
             </p>
 
             <div class="booking-perks-list">
@@ -964,18 +964,14 @@
 
             <!-- Direct Platform Booking Buttons -->
             <div class="platform-booking-buttons">
-              <a href="https://www.airbnb.com/rooms/652864643401920477" target="_blank" rel="noopener noreferrer" class="btn btn-airbnb">
+              <a href="https://www.airbnb.com/rooms/652864643401920477" target="_blank" rel="noopener noreferrer" class="btn btn-airbnb btn-lg">
                 <svg width="20" height="20" viewBox="0 0 32 32" fill="currentColor"><path d="M16 1c-4.4 0-8 3.6-8 8 0 6.6 8 18 8 18s8-11.4 8-18c0-4.4-3.6-8-8-8zm0 11.5c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5z"/></svg>
                 <span>Book on Airbnb</span>
               </a>
-              <button class="btn btn-direct" onclick="openInquiryModal()">
-                <i data-lucide="mail"></i>
-                <span>Direct Host Inquiry</span>
-              </button>
             </div>
           </div>
 
-          <!-- Quick Rate Calculator / Inquiry Widget -->
+          <!-- Quick Rate Calculator / Booking Widget -->
           <div class="booking-right-widget">
             <div class="widget-header">
               <div class="widget-price">
@@ -985,7 +981,7 @@
               <div class="widget-rating">★ 4.9 (10)</div>
             </div>
 
-            <form class="inquiry-form" id="quick-inquiry-form" onsubmit="handleQuickInquiry(event)">
+            <form class="inquiry-form" id="quick-inquiry-form" onsubmit="handleQuickBooking(event)">
               <div class="form-row">
                 <div class="form-group">
                   <label for="check-in-date"><i data-lucide="calendar"></i> Check-in</label>
@@ -1021,12 +1017,12 @@
               </div>
 
               <button type="submit" class="btn btn-primary btn-block btn-widget">
-                <span>Check Dates & Send Inquiry</span>
+                <span>Check Availability on Airbnb</span>
                 <i data-lucide="arrow-right"></i>
               </button>
 
               <div class="widget-note">
-                <i data-lucide="lock"></i> Direct inquiries answered by Host Rick within an hour
+                <i data-lucide="shield-check"></i> Instant confirmation & verified reservations on Airbnb
               </div>
             </form>
           </div>
@@ -1085,15 +1081,12 @@
       </div>
 
       <div class="footer-col">
-        <h4>Direct Booking</h4>
+        <h4>Reserve Your Stay</h4>
         <p class="f-text">Reserve your preferred dates online:</p>
         <div class="f-cta-col">
           <a href="https://www.airbnb.com/rooms/652864643401920477" target="_blank" rel="noopener noreferrer" class="f-link-btn">
-            <span>View on Airbnb</span> &rarr;
+            <span>Book on Airbnb</span> &rarr;
           </a>
-          <button class="f-link-btn" onclick="openInquiryModal()">
-            <span>Send Direct Message to Rick</span> &rarr;
-          </button>
         </div>
       </div>
     </div>
@@ -1129,57 +1122,6 @@
       <button class="lightbox-btn lightbox-next" onclick="nextLightboxImage()" aria-label="Next Photo">
         <i data-lucide="chevron-right"></i>
       </button>
-    </div>
-  </div>
-
-  <!-- Direct Host Inquiry Modal -->
-  <div class="inquiry-modal" id="inquiry-modal" role="dialog" aria-modal="true" aria-label="Direct Inquiry Modal">
-    <div class="inquiry-backdrop" onclick="closeInquiryModal()"></div>
-    <div class="inquiry-dialog">
-      <button class="inquiry-close" onclick="closeInquiryModal()" aria-label="Close Modal">
-        <i data-lucide="x"></i>
-      </button>
-      <div class="inquiry-head">
-        <div class="inquiry-badge"><i data-lucide="mail"></i> Direct Host Connection</div>
-        <h3>Inquire About Norden Haus</h3>
-        <p>Send a message directly to Rick with your travel dates or questions.</p>
-      </div>
-
-      <form class="inquiry-modal-form" id="direct-inquiry-form" onsubmit="submitDirectInquiry(event)">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="modal-name">Your Full Name</label>
-            <input type="text" id="modal-name" placeholder="e.g. Sarah Jenkins" required />
-          </div>
-          <div class="form-group">
-            <label for="modal-email">Email Address</label>
-            <input type="email" id="modal-email" placeholder="sarah@example.com" required />
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="modal-checkin">Target Check-in</label>
-            <input type="date" id="modal-checkin" required />
-          </div>
-          <div class="form-group">
-            <label for="modal-checkout">Target Check-out</label>
-            <input type="date" id="modal-checkout" required />
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="modal-message">Your Message or Questions</label>
-          <textarea id="modal-message" rows="3" placeholder="Tell us about your group, questions about golf/ski slopes, or special requests..."></textarea>
-        </div>
-
-        <div class="modal-form-actions">
-          <button type="submit" class="btn btn-primary btn-block">
-            <span>Send Message to Host</span>
-            <i data-lucide="send"></i>
-          </button>
-        </div>
-      </form>
     </div>
   </div>
 

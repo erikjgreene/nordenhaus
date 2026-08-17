@@ -12,7 +12,7 @@ totalReviews: 10
 city: "Bellaire"
 state: "Michigan"
 resort: "Shanty Creek Resort"
-hostName: "Rick"
+hostName: "Norden Haus Host"
 isSuperhost: true
 ---
 
@@ -165,7 +165,7 @@ You are in Northern Michigan! Our lakes, woods, and fresh air are part of what m
 ---
 
 ## Host Information
-- **Host Name:** Rick (Superhost ★)
+- **Host Status:** Superhost ★
 - **Response Rate:** 100% (within an hour)
 - **About:** Dedicated host committed to providing memorable stays for guests visiting Schuss Mountain and Shanty Creek Resort.
 
@@ -179,27 +179,27 @@ You are in Northern Michigan! Our lakes, woods, and fresh air are part of what m
 
 ### ★ 5/5.0 - Derek J. (2023-08-07)
 *Great Stay*
-> "Dealing with Rick was the best, he answered all questions plus more, confirmed boat launches near by, place was great, fun and awesome back in the woods. We all had a blast and would stay there again for sure!"
+> "Dealing with the host was the best, all questions were answered plus more, confirmed boat launches near by, place was great, fun and awesome back in the woods. We all had a blast and would stay there again for sure!"
 
 ### ★ 5/5.0 - Zachary C. (2023-01-27)
 *Wonderful property, even better host*
 > "We absolutely loved our stay! No trouble getting to the location, everything was in order as advertised, and communication was above and beyond. Thank you for providing a fantastic home base for our trip!"
 
-**Host Response (Rick (Owner)):**
+**Host Response (Host (Owner)):**
 > "Thank you Zachary! Great guest! Very good communication! Highly recommended."
 
 ### ★ 5/5.0 - John R. (2023-01-21)
 *We love Schuss Mountain area*
 > "Owner of property responded quickly to emails, house was very clean and comfortable, we hope to stay again next winter!"
 
-**Host Response (Rick (Owner)):**
+**Host Response (Host (Owner)):**
 > "Great guest. Very responsive and left the home in great shape. Come back anytime, John!"
 
 ### ★ 5/5.0 - Jay H. (2023-02-07)
 *Very close to ski hill and DT Bellaire*
 > "We loved our time here. Very close to the ski hill and DT Bellaire. A+"
 
-**Host Response (Rick (Owner)):**
+**Host Response (Host (Owner)):**
 > "Thanks Jay! Glad you enjoyed your stay. See you next time!"
 
 ### ★ 5/5.0 - Elanda T. (2023-08-03)
@@ -208,7 +208,7 @@ You are in Northern Michigan! Our lakes, woods, and fresh air are part of what m
 
 ### ★ 5/5.0 - Jason C. (2022-07-20)
 *Perfect stay!*
-> "This is a great property and I’ve stayed at several over the years. Rick really made everything go smoothly and gave us several recommendations in the area for things to do! Check in and out was super smooth with clear checklists. We had six kids with us and they fit perfectly and loved the bunk beds. The fire pit was great and everything in the house was brand new. We went to the water park and Torch Lake and they are both quick drives. The pool pass was a bonus and the kids loved the indoor and outdoor pools! Thank you for sharing your beautiful place with our family! We will stay here again for sure!!"
+> "This is a great property and I’ve stayed at several over the years. The host really made everything go smoothly and gave us several recommendations in the area for things to do! Check in and out was super smooth with clear checklists. We had six kids with us and they fit perfectly and loved the bunk beds. The fire pit was great and everything in the house was brand new. We went to the water park and Torch Lake and they are both quick drives. The pool pass was a bonus and the kids loved the indoor and outdoor pools! Thank you for sharing your beautiful place with our family! We will stay here again for sure!!"
 
 ### ★ 5/5.0 - Sean R. (2022-09-29)
 *Golf Trip*
