@@ -344,7 +344,7 @@ function renderGalleryGrid(filterCategory = 'all') {
       const globalIndex = PROPERTY_PHOTOS.findIndex((p) => p.filename === photo.filename);
       return `
       <div class="gallery-item" onclick="openLightbox(${globalIndex})">
-        <img src="airbnb_home_photos105/${photo.filename}" alt="${photo.title}" loading="lazy" />
+        <img src="nordenhaus_photos/${photo.filename}" alt="${photo.title}" loading="lazy" />
         <div class="gallery-overlay">
           <span class="gallery-overlay-title">${photo.title}</span>
           <span class="gallery-overlay-cat">${getCategoryLabel(photo.category)} • Click to enlarge</span>
@@ -446,7 +446,7 @@ function updateLightboxContent() {
   const desc = document.getElementById('lightbox-desc');
 
   if (img) {
-    img.src = `airbnb_home_photos105/${photo.filename}`;
+    img.src = `nordenhaus_photos/${photo.filename}`;
     img.alt = photo.title;
   }
   if (counter) {
