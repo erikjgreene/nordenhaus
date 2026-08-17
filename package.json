@@ -1,0 +1,24 @@
+{
+  "name": "nordenhaus-data-extractor",
+  "version": "1.0.0",
+  "description": "Direct Airbnb listing and reviews scraper (no images, no Apify required) for Norden Haus website build",
+  "type": "module",
+  "main": "scripts/scrape_airbnb_direct.js",
+  "scripts": {
+    "dev": "python3 -m http.server 3000",
+    "serve": "python3 -m http.server 3000",
+    "scrape": "node scripts/scrape_airbnb_direct.js",
+    "scrape:py": "python3 scripts/scrape_airbnb_direct.py",
+    "scrape:apify": "node scripts/scrape_airbnb_data.js"
+  },
+  "keywords": [
+    "airbnb",
+    "scraper",
+    "reviews",
+    "nordenhaus",
+    "vacation-rental",
+    "travel"
+  ],
+  "author": "",
+  "license": "ISC"
+}
