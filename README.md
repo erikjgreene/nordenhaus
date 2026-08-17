@@ -1,8 +1,8 @@
-# Norden Haus - Direct Airbnb Listing & Reviews Extractor and Website
+# Norden Haus - Website
 
-Direct, standalone scraper, data pipeline, and interactive web experience tailored specifically for **Norden Haus** ([Airbnb Listing 652864643401920477](https://www.airbnb.com/rooms/652864643401920477)).
+Interactive web experience tailored specifically for **Norden Haus** ([Airbnb Listing 652864643401920477](https://www.airbnb.com/rooms/652864643401920477)).
 
-Extracts location metadata, property attributes, space breakdown, categorized amenities, sleeping arrangements, house rules, host bio, and full guest reviews into a clean, website-ready data model.
+Includes listing extraction module for Airbnb listing. 
 
 ---
 
@@ -29,7 +29,7 @@ http://localhost:3000
 
 ---
 
-## Quick Start with `uv` (Scraper & Data Pipeline)
+## Quick Start with `uv` (Scraper )
 
 This project uses [`uv`](https://docs.astral.sh/uv/) for Python package management.
 
